@@ -392,7 +392,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -406,12 +406,17 @@
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+  // Ender 5 Plus
+  #define  DEFAULT_bedKp 481.83
+  #define  DEFAULT_bedKi 69.20
+  #define  DEFAULT_bedKd 838.75
+
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   // Stock bed tuned for 50C
-  #define  DEFAULT_bedKp 204.09
-  #define  DEFAULT_bedKi 36.11
-  #define  DEFAULT_bedKd 288.40
+  //#define  DEFAULT_bedKp 204.09
+  //#define  DEFAULT_bedKi 36.11
+  //#define  DEFAULT_bedKd 288.40
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -692,9 +697,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 0  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0  // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER -45  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -7  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -3  // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -730,7 +735,7 @@
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
 // Enable the M48 repeatability test to test probe accuracy
-//#define Z_MIN_PROBE_REPEATABILITY_TEST
+#define Z_MIN_PROBE_REPEATABILITY_TEST
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 // :{ 0:'Low', 1:'High' }
@@ -898,13 +903,6 @@
 
   // Probe along the Y axis, advancing X after each column
   //#define PROBE_Y_FIRST
-
-  /**
-   *   Z Probe to nozzle (X,Y,Z) offset, relative to (0, 0, 0).
-   */
-  #define X_PROBE_OFFSET_FROM_NOZZLE  -27  // 0 X offset: -left  +right  [of the nozzle]
-  #define Y_PROBE_OFFSET_FROM_NOZZLE  0.0  // Y offset: -front +behind [the nozzle]
-  #define Z_PROBE_OFFSET_FROM_NOZZLE  0.0  // Z offset: -below +above  [the nozzle]
 
   #if ENABLED(AUTO_BED_LEVELING_BILINEAR)
 

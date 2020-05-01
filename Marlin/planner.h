@@ -36,7 +36,7 @@
 #include "enum.h"
 #include "Marlin.h"
 #include "cardreader.h"
-#include "lcd_rts.h"
+#include "LCD_RTS.h"
 
 #if HAS_ABL
   #include "vector_3.h"

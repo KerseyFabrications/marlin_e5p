@@ -1,7 +1,7 @@
 #include "LCD_RTS.h"
 #include <HardwareSerial.h>
-#include <arduino.h>
-#include <wstring.h>
+#include <Arduino.h>
+#include <WString.h>
 #include <stdio.h>
 #include "MarlinConfig.h"
 

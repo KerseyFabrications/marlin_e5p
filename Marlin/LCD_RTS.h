@@ -2,7 +2,7 @@
 #define	RTS_H
 
 #include "string.h"
-#include <arduino.h>
+#include <Arduino.h>
 
 /*********************************/
 #define FHONE   (0x5A)
