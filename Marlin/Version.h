@@ -36,6 +36,7 @@
    * Marlin release version identifier
    */
   #define SHORT_BUILD_VERSION "Ver 1.71.0 KF"
+  //#define SHORT_BUILD_VERSION "Ver 1.71.0 KF HMG3"
 
   /**
    * Verbose version identifier which should contain a reference to the location
